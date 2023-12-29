@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap'); 
+ :root {
+    --bgColor: #31567a;
+    --bgColor2: #5eb424;
+    --accenrColor: rgb(198, 31, 31)c2c;
+    --font: 'Karla' , sans-serif;
+    --delaay: .3s;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        font-family: var(--font);
+        background-image: url(gri-arka-plan.jpg);
+        opacity: 0;
+
+        animation: 1s ease-out var(--delaay) 1 transitionAnimation;
+        animation-iteration-count: forwards;
+        background-size: cover;
+        position: relative;
+    }
+    #profilePicture, #profilePİcture img {
+        position: relative;
+        width: 125px;
+        height: 125px;
+        display: block;
+        margin: 40px auto 20px;
+        border-radius: 50%;
+       -webkit-tap-highling-color : transparent;
+       
+    }
+    #userName {
+        color: var(--accenrColor);
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.25;
+        display: block;
+        font-family:var(--font);
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+    }
+   #links{
+    max-width: 675px;
+    width: auto;
+    display: block;
+   margin: 27px auto;  
+    }
+    .link { 
+    position:relative;
+    background-color: transparent;
+    color: var(--accenrColor);
+    border: solid var(--accenrColor 2px);
+    border-radius: 10px;
+    font-size: 1rem;
+    }
+ @media (hover  :hover) {
+    .link:hover{
+        background-color: var(--accenrColor);
+        color: var(--bgColor);
+    }
+ }
+ .link:active {
+    background-color: var(--accenrColor);
+    color: var(--bgColor);
+ }
+ .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: aquamarine;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+ }
+ .oberlay:target {
+    visibility: visible;
+    opacity: 1;
+ }
+
+
